@@ -1,4 +1,8 @@
 :"PTSUMS"
+
+' Note: some TI calculators require that the η symbol in line 105 be replaced in-calculator
+' Switch mode to SEQ and enter the 'η' key on the line
+
 ClrHome
 Float
 Output(2,5,"Sequences Solver"
@@ -98,7 +102,7 @@ PlotsOff
 FnOff
 FnOn 1,2
 GraphStyle(1,7
-μMin=1
+ηMin=1
 "A(R)^(n-1)"→u
 ZoomFit
 Text(150,175,"Nth Term Graph"
