@@ -106,5 +106,5 @@ GraphStyle(1,7
 "A(R)^(n-1)"→u
 ZoomFit
 Text(150,175,"Nth Term Graph"
-Pause
+Pause 
 Stop
