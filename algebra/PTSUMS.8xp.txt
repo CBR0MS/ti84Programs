@@ -1,6 +1,6 @@
 :"PTSUMS"
 
-' Note: some TI calculators require that the η symbol in line 105 be replaced in-calculator
+' Note: some TI calculators require that the η symbol in line 114 be replaced in-calculator
 ' Switch mode to SEQ and enter the 'η' key on the line
 
 ClrHome
@@ -19,8 +19,10 @@ Prompt A
 Disp "Common Ratio?"
 Prompt R
 Goto 2
+
 Lbl 2
 Menu("Actions","Sequence of Partial Sums",1,"Nth Term Calc",3
+
 Lbl 1
 A(1-R^1)/(1-R)→T
 A(1-R^2)/(1-R)→Y
@@ -28,9 +30,11 @@ A(1-R^3)/(1-R)→U
 A(1-R^4)/(1-R)→I
 A(1-R^5)/(1-R)→O
 A(1-R^6)/(1-R)→P
+
 If abs(R)<1
-Then
-A/(1-R)→V
+  Then
+      A/(1-R)→V
+      
 ClrHome
 Disp T,Y,U,I,O,P,V
 Output(7,1,"S(Infinity)="
@@ -44,40 +48,44 @@ Disp T,Y,U,I,O,P
 Output(7,1,"S(Infinity)=D.N.E."
 Output(9,1,"Press enter for graph…"
 End
-Pause
+Pause 
 ClrHome
 Goto 4
+
 Lbl 4
 Func
 PlotsOff
 FnOff
-If P<T
-Then
-7→Xmax
-0→Xmin
-T→Ymax
-P→Ymin
-Else
-7→Xmax
-0→Xmin
-P→Ymax
-T→Ymin
-End
+ If P<T
+  Then
+    7→Xmax
+    0→Xmin
+    T→Ymax
+    P→Ymin
+  Else
+    7→Xmax
+    0→Xmin
+    P→Ymax
+    T→Ymin
+  End
 {1,2,3,4,5,6}→L₁
 {T,Y,U,I,O,P}→L₂
 Plot1(Scatter,L₁,L₂
 DispGraph
 Text(150,195,"SPS Graph"
 Stop
+
 Lbl 3
 Disp "Nth Term?"
 Prompt N
 Goto 7
+
 Lbl 7
 ClrHome
 A(R)^(R-1)→K
 Disp K
 End
+
 Lbl 8
 A(R)^(1-1)→D
 A(R)^(2-1)→F
@@ -95,6 +103,7 @@ Output(7,1,M
 Output(9,1,"Press enter for graph…"
 Pause
 Goto 5
+
 Lbl 5
 ClrHome
 Seq
