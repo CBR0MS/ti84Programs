@@ -1,0 +1,247 @@
+:"KINEMTS"
+ClrHome
+Float
+Output(2,5,"Kinematics Solver"
+Output(4,8,"Written By"
+Output(5,6,"Christian Broms"
+Output(7,3,"www.christianbroms.com
+Output(10,20,"Enter >"
+Pause 
+Lbl Z
+ClrHome
+566.6666→X
+Menu("Solve For:","Inital Velocity",F,"Final Velocity",G,"Acceleration",H,"Displacement",I,"Time",J
+Lbl F
+Disp "If variable is unknown,
+Disp "enter: X
+Input "Final Velocity:",V
+Input "Acceleration:",A
+Input "Displacement:",D
+Input "Time:",T
+ClrHome
+If V=X
+Then
+Goto 1A
+Else
+If A=X
+Then
+Goto 1B
+Else
+If D=X
+Then
+Goto 1C
+Else
+If T=X
+Then
+Goto 1D
+End
+Lbl 1A
+(D-.5AT^2)/T→I
+ClrHome
+Disp "Initial Velocity=",I
+Stop
+Lbl 1B
+(2D-TV)/T→I
+ClrHome
+Disp "Initial Velocity=",I
+Stop
+Lbl 1C
+V-AT→I
+ClrHome
+Disp "Initial Velocity=",I
+Stop
+Lbl 1D
+ClrHome
+Disp "Error! Time is needed
+Disp "to solve for Vi
+Disp ""
+Disp "Try Again...
+Stop
+Lbl G
+Disp "If variable is unknown,
+Disp "enter: X
+Input "Initial Velocity:",I
+Input "Acceleration:",A
+Input "Displacement:",D
+Input "Time:",T
+ClrHome
+If I=X
+Then
+Goto 2A
+Else
+If A=X
+Then
+Goto 2B
+Else
+If D=X
+Then
+Goto 2C
+Else
+If T=X
+Then
+Goto 2D
+End
+Lbl 2A
+(D-(1/2)AT^2)/T→I
+I^2+2AT→Z
+Z^(1/2)→V
+ClrHome
+Disp "Final Velocity=",V
+Stop
+Lbl 2B
+(D-IT)/((1/2)T^2)→A
+I^2+2AD→Z
+Z^(1/2)→V
+ClrHome
+Disp "Final Velocity=",V
+Stop
+Lbl 2C
+IT+(1/2)AT^2→D
+I^2+2AD→Z
+Z^(1/2)→V
+ClrHome
+Disp "Final Velocity=",V
+Stop
+Lbl 2D
+I^2+2AD→Z
+Z^(1/2)→V
+ClrHome
+Disp "Final Velocity=",V
+Stop
+Lbl H
+Disp "If variable is unknown,
+Disp "enter: X
+Input "Initial Velocity:",I
+Input "Final Velocity:",V
+Input "Displacement:",D
+Input "Time:",T
+ClrHome
+If I=X
+Then
+Goto 3A
+Else
+If V=X
+Then
+Goto 3B
+Else
+If D=X
+Then
+Goto 3C
+Else
+If T=X
+Then
+Goto 3D
+End
+Lbl 3A
+(2D-TV)/T→I
+(D-IT)/((1/2)T^2)→A
+ClrHome
+Disp "Acceleration=",A
+Stop
+Lbl 3B
+(D-IT)/((1/2)T^2→A
+ClrHome
+Disp "Acceleration=",A
+Stop
+Lbl 3C
+(V-I)/T→A
+ClrHome
+Disp "Acceleration=",A
+Stop
+Lbl 3D
+(V^2-I^2)/2D→A
+ClrHome
+Disp "Acceleration=",A
+Stop
+Lbl I
+Disp "If variable is unknown,
+Disp "enter: X
+Input "Initial Velocity:",I
+Input "Final Velocity:",V
+Input "Acceleration:",A
+Input "Time:",T
+ClrHome
+If I=X
+Then
+Goto 4A
+Else
+If V=X
+Then
+Goto 4B
+Else
+If A=X
+Then
+Goto 4C
+Else
+If T=X
+Then
+Goto 4D
+End
+Lbl 4A
+(T(I+V))/2→D
+ClrHome
+Disp "Displacement=",D
+Stop
+Lbl 4B
+IT+(1/2)AT^2→D
+ClrHome
+Disp "Displacement=",D
+Stop
+Lbl 4C
+(T(I+V))/2→D
+ClrHome
+Disp "Displacement=",D
+Stop
+Lbl 4D
+(V^2-I^2)/(2A)→D
+ClrHome
+Lbl J
+Disp "If variable is unknown,
+Disp "enter: X
+Input "Initial Velocity:",I
+Input "Final Velocity:",V
+Input "Acceleration:",A
+Input "Displacement:",D
+ClrHome
+If I=X
+Then
+Goto 5A
+Else
+If V=X
+Then
+Goto 5B
+Else
+If A=X
+Then
+Goto 5C
+Else
+If D=X
+Then
+Goto 5D
+End
+Lbl 5A
+ClrHome
+Disp "Error! Vi is needed
+Disp "to solve for Time
+Disp ""
+Disp "Try Again...
+Stop
+Lbl 5B
+I^2+2AD→Z
+Z^(1/2)→V
+(V-I)/A→T
+ClrHome
+Disp "Time=",T
+Stop
+Lbl 5C
+(V^2-I^2)/2D→A
+(V-I)/A→T
+ClrHome
+Disp "Time=",T
+Stop
+Lbl 5D
+(V^2-I^2)/2A→D
+(V-I)/A→T
+ClrHome
+Disp "Time=",T
+Stop
