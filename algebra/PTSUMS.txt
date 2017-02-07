@@ -98,7 +98,7 @@ PlotsOff
 FnOff
 FnOn 1,2
 GraphStyle(1,7
-[INSERT MU SYMBOL]Min=1
+μMin=1
 "A(R)^(n-1)"→u
 ZoomFit
 Text(150,175,"Nth Term Graph"
