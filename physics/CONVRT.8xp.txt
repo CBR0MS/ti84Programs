@@ -1,0 +1,156 @@
+:"CONVRT"
+ClrHome
+Float
+Output(2,5,"Conversion Calculator"
+Output(4,8,"Written By"
+Output(5,6,"Christian Broms"
+Output(7,3,"www.christianbroms.com
+Output(10,20,"Enter >"
+Pause 
+Menu("SELECT CONVERSION","DISTANCE",A,"TEMP",B,"MASS",C,"SPEED",D,"AREA",E
+Lbl A
+Menu("CONVERT FROM","MILES",4,"KILOMETERS",5,"INCHES",15,"CENTIMETERS",16
+Lbl 4
+Input ("ENTER DIST IN MILES:",M
+M/0.62137→K
+M*63360→I
+M*160934→C
+Goto 6
+Lbl 5
+Input ("ENTER DIST IN KM:",K
+K*0.62137→M
+K*39370.1→I
+K*100000→C
+Goto 6
+Lbl 15
+Input ("ENTER DIST IN INCHES:",I
+I*2.54ᴇ⁻5→K
+I*1.5783ᴇ⁻5→M
+I*2.54→C
+Goto 6
+Lbl 16
+Input ("ENTER DIST IN CM:",C
+C*6.2137ᴇ⁻6→M
+C*1ᴇ⁻5→K
+C*0.393701→I
+Goto 6
+Lbl 6
+round(M,4
+round(K,4
+round(I,4
+round(C,4
+ClrHome
+Disp M,K,I,C
+Output(1,1,"MILES")
+Output(2,1,"KILOMETERS")
+Output(3,1,"INCHES")
+Output(4,1,"CENTIMETERS")
+Stop
+Lbl B
+Menu(" CONVERT FROM ","FAHRENHEIT",1,"CELSIUS",2,"KELVIN",3
+Lbl 1
+Input ("ENTER TEMP IN F:",F
+5(F-32)/9→C
+C+273.15→K
+Goto 7
+Lbl 2
+Input ("ENTER TEMP IN C:",C
+C+273.15→K
+9C/5+32→F
+Goto 7
+Lbl 3
+Input ("ENTER TEMP IN K:",K
+K-273.15→C
+9C/5+32→F
+Lbl 7
+ClrHome
+Disp F,C,K
+Output(1,1,"FAHRENHEIT")
+Output(2,1,"CELSIUS")
+Output(3,1,"KELVIN")
+Stop
+Lbl C
+Menu("CONVERT FROM","POUNDS",8,"GRAMS",9
+Lbl 8
+Input ("ENTER MASS IN LBS:",P
+P/0.0022046→G
+Goto 10
+Lbl 9
+Input ("ENTER MASS IN GM:",G
+G*0.0022046→P
+Goto 10
+Lbl 10
+ClrHome
+Disp P,G
+Output(1,1,"POUNDS")
+Output(2,1,"GRAMS")
+Stop
+Lbl D
+Menu("CONVERT FROM","MILES PER HOUR",11,"KILOMETERS PER HOUR",12,"FEET PER SECOND",13,"METERS PER SECOND",17
+Lbl 11
+Input ("ENTER SPEED IN MPH:",M
+M*1.609344→K
+M*1.466667→F
+M*0.44704→S
+Goto 18
+Lbl 12
+Input ("ENTER SPEED IN KPH:",K
+K*0.621371→M
+K*0.911344→F
+K*0.277778→S
+Goto 18
+Lbl 13
+Input ("ENTER SPEED IN FPS:",F
+F*0.681818→M
+F*1.09728→K
+F*0.3048→S
+Goto 18
+Lbl 17
+Input ("ENTER SPEED IN MPS:",S
+S*2.23694→M
+S*3.6→K
+S*3.28084→F
+Goto 18
+Lbl 18
+ClrHome
+Disp M,K,F,S
+Output(1,1,"MPH")
+Output(2,1,"KPH")
+Output(3,1,"FPS")
+Output(4,1,"MPS")
+Stop
+Lbl E
+Menu("CONVERT FROM","SQ FEET",20,"SQ MILES",21,"SQ INCHES",22,"SQ METERS",23
+Lbl 20
+Input ("ENTER AREA IN SQ FT:",F
+F*3.587ᴇ⁻8→M
+F*144→I
+F*0.092903→E
+Goto 24
+Lbl 21
+Input ("ENTER AREA IN SQ MI:",M
+M*2.788ᴇ7→F
+M*4.014ᴇ9→I
+M*2.59ᴇ6→E
+Goto 24
+Lbl 22
+Input ("ENTER AREA IN SQ IN:",I
+I*0.00694444→F
+I*2.491ᴇ⁻10→M
+I*0.00064516→E
+Goto 24
+Lbl 23
+Input ("ENTER AREA IN SQ MTRS:",E
+E*10.7639→F
+E*3.861ᴇ⁻7→M
+E*1550→I
+Goto 24
+Lbl 24
+ClrHome
+Disp I,F,E,M
+Output(1,1,"INCHES")
+Output(2,1,"FEET")
+Output(3,1,"METERS")
+Output(4,1,"MILES")
+Stop
+End
