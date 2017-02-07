@@ -1,0 +1,32 @@
+:"SQUARE"
+ClrHome
+Float
+Output(2,5,"Complete the Square"
+Output(4,8,"Written By"
+Output(5,6,"Christian Broms"
+Output(7,3,"www.christianbroms.com
+Output(10,20,"Enter >"
+Pause 
+Lbl 1
+ClrHome
+Disp "(A)x²+(B)x+(C)=(F)
+Prompt A,B,C,F
+A/A→A
+C/A→C
+B/2→S
+S²→T
+T-C→U
+U+F→Y
+⁻S-√(U)→K
+⁻S+√(U)→J
+ClrHome
+Disp "",S,Y,K,J
+Output(1,1,"(x+c)²=r
+Output(2,10,"c="
+Output(3,10,"r="
+Output(4,10,"X="
+Output(5,10,"X="
+Pause 
+Menu("Again?","Yes",1,"No",2
+Lbl 2
+Stop
