@@ -153,6 +153,7 @@ Lbl 3D
 ClrHome
 Disp "Acceleration=",A
 Stop
+
 Lbl I
 Disp "If variable is unknown,
 Disp "enter: X
@@ -162,21 +163,22 @@ Input "Acceleration:",A
 Input "Time:",T
 ClrHome
 If I=X
-Then
-Goto 4A
+  Then
+    Goto 4A
 Else
 If V=X
-Then
-Goto 4B
+  Then
+    Goto 4B
 Else
-If A=X
-Then
-Goto 4C
+ If A=X
+  Then
+    Goto 4C
 Else
 If T=X
-Then
-Goto 4D
+  Then
+    Goto 4D
 End
+
 Lbl 4A
 (T(I+V))/2→D
 ClrHome
